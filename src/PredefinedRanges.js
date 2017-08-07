@@ -27,6 +27,7 @@ class PredefinedRanges extends Component {
   renderRangeList(classes) {
     const { ranges, range, onlyClasses } = this.props;
     const { styles } = this;
+    const that = this;
 
     return Object.keys(ranges).map(name => {
       const active = (
@@ -55,7 +56,7 @@ class PredefinedRanges extends Component {
           {name}
         </a>
       );
-    }.bind(this));
+    });
   }
 
   render() {
